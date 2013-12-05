@@ -9,8 +9,8 @@ String.prototype.distance = (reference) ->
     string2Matches = []
 
     for ch, i in string1
-      windowStart = Math.max(0, i - matchWindow)
-      windowEnd = Math.min(i + matchWindow + 1, string2.length)
+      windowStart = ~~Math.max(0, i - matchWindow)
+      windowEnd = ~~Math.min(i + matchWindow + 1, string2.length)
 
       for j in [windowStart...windowEnd]
         if !string2Matches[j]? && ch == string2[j]
