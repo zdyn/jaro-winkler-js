@@ -4,13 +4,13 @@ String.prototype.distance = (reference) ->
   distance = (string1, string2) ->
     [string1, string2] = [string2, string1] if string1.length > string2.length
 
-    matchWindow = Math.max(0, string2.length / 2 - 1)
+    matchWindow = ~~Math.max(0, string2.length / 2 - 1)
     string1Matches = []
     string2Matches = []
 
     for ch, i in string1
-      windowStart = Math.ceil(Math.max(0, i - matchWindow))
-      windowEnd = ~~Math.min(i + matchWindow + 1, string2.length)
+      windowStart = Math.max(0, i - matchWindow)
+      windowEnd = Math.min(i + matchWindow + 1, string2.length)
 
       for j in [windowStart...windowEnd]
         if !string2Matches[j]? && ch == string2[j]
