@@ -1,12 +1,10 @@
-jaro-winkler-js
-===============
+# jaro-winkler-js
 
 An implementation of the Jaro-Winkler distance algorithm (a measure of string similarity) in CoffeeScript (minified js also provided).
 
-Usage
------
+## Usage
 
-A `distance` method is added to the String prototype (yeah yeah).
+A `distance` method is added to the String prototype.
 
 Example:
 
