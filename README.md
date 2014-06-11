@@ -15,3 +15,7 @@ Example:
 "br".distance("brian zhou") // 0.79
 "br".distance("bo chen")    // 0.59
 ```
+
+## License
+
+[MIT](http://www.opensource.org/licenses/mit-license.php)
